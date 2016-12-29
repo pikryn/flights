@@ -2,6 +2,10 @@
 rm(list = setdiff(ls(), lsf.str()))
 ptm <- proc.time()
 
+install.packages("stringr")
+install.packages("rvest")
+install.packages("xlsx")
+
 library(stringr)
 library(rvest)
 ###krok 1 - tworzenie data frame
