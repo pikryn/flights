@@ -2,9 +2,9 @@
 rm(list = setdiff(ls(), lsf.str()))
 ptm <- proc.time()
 
-install.packages("stringr")
-install.packages("rvest")
-install.packages("xlsx")
+install.packages("stringr", repos='http://cran.us.r-project.org')
+install.packages("rvest", repos='http://cran.us.r-project.org')
+install.packages("xlsx", repos='http://cran.us.r-project.org')
 
 library(stringr)
 library(rvest)
