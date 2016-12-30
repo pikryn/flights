@@ -1,0 +1,9 @@
+[Unit]
+Description=Runs myscript every hour
+
+[Timer]
+OnCalendar=daily
+Unit=flights.service
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,6 @@
+[Unit]
+Description=MyScript
+
+[Service]
+Type=simple
+ExecStart=/home/ubuntu/flights/runFlights.sh
