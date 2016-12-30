@@ -13,5 +13,6 @@ ADD install.R /
 RUN Rscript /install.R 
 ADD flights.R /
 ADD opisy /opisy/
-VOLUME /loty_dane
-CMD Rscript /flights.R small
+
+#CMD echo > /loty_dane/magic 
+CMD Rscript /flights.R
