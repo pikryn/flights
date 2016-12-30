@@ -2,10 +2,6 @@
 rm(list = setdiff(ls(), lsf.str()))
 ptm <- proc.time()
 
-install.packages("stringr", repos='http://cran.us.r-project.org')
-install.packages("rvest", repos='http://cran.us.r-project.org')
-install.packages("xlsx", repos='http://cran.us.r-project.org')
-
 library(stringr)
 library(rvest)
 ###krok 1 - tworzenie data frame
@@ -21,10 +17,11 @@ dokad = toString("BCN")
 kodLini=toString("W6")
 
 library(xlsx)
-setwd("K:\\Dysk Google\\UE wroc\\Studia\\Magisterka\\Magisterka\\Zabawy w R\\opisy")
+setwd("opisy")
 kierunkiZexcela<-read.xlsx("kierunki.xlsx", sheetIndex=1, header=TRUE, stringsAsFactors=FALSE)
 kierunki=data.frame(kierunkiZexcela, stringsAsFactors = FALSE)
-setwd("K:\\Dysk Google\\UE wroc\\Studia\\Magisterka\\Magisterka\\Zabawy w R\\loty_dane")
+setwd("..")
+setwd("loty_dane")
 
 #rok 16 albo 17
 ZakresRok=c(16,17)
