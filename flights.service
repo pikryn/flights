@@ -3,4 +3,4 @@ Description=MyScript
 
 [Service]
 Type=simple
-ExecStart=/home/ubuntu/flights/runFlights.sh
+ExecStart=/bin/sh /home/ubuntu/flights/runFlights.sh

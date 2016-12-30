@@ -14,5 +14,4 @@ RUN Rscript /install.R
 ADD flights.R /
 ADD opisy /opisy/
 
-#CMD echo > /loty_dane/magic 
 CMD Rscript /flights.R
