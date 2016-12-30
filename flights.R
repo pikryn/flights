@@ -5,11 +5,25 @@ ptm <- proc.time()
 #ustawia czas trwania algorytmu large caly plik, small 
 cmds <- commandArgs()
 cmdLen <- length(cmds)
+
+args = FALSE
+for (arg in cmds) {
+ if (arg == "--args") {
+  args = TRUE
+ }
+}
+
+
 if (cmds[cmdLen] == "small"){
   small <- TRUE
 } else {
   small <- FALSE
 }
+
+small <- small && args
+
+print("small")
+print(small)
 
 fixwd <- function() {
   setwd("K:/Dysk Google/UE wroc/Studia/Magisterka/Magisterka/Zabawy w R")
