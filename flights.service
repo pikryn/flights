@@ -3,4 +3,6 @@ Description=MyScript
 
 [Service]
 Type=simple
+TimeoutStopSec=10000
+Restart=on-failure
 ExecStart=/bin/sh /home/ubuntu/flights/runFlights.sh

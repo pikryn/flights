@@ -1,5 +1,5 @@
 [Unit]
-Description=Runs myscript every hour
+Description=Run flights every so often
 
 [Timer]
 OnCalendar=daily
