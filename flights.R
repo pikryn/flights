@@ -2,6 +2,19 @@
 rm(list = setdiff(ls(), lsf.str()))
 ptm <- proc.time()
 
+#ustawia czas trwania algorytmu large caly plik, small 
+cmds <- commandArgs()
+cmdLen <- length(cmds)
+if (cmds[cmdLen] == "small"){
+  small <- TRUE
+} else {
+  small <- FALSE
+}
+
+fixwd <- function() {
+  setwd("K:/Dysk Google/UE wroc/Studia/Magisterka/Magisterka/Zabawy w R")
+}
+
 library(stringr)
 library(rvest)
 ###krok 1 - tworzenie data frame
@@ -55,7 +68,11 @@ k=1 #wieesz w macierzy przylotów-odlotów
 j=1 #wiersz w dfWylot
 q=1 #wiersz w dfPrzylot
 
-t=nrow(kierunki)
+
+#jezeli small true to tylko 2 loty
+if(small==TRUE){
+      t=2}else{
+      t=nrow(kierunki)}
 while (k<=t[1][1]) {    #petla po kierunkach 
   
   skad=kierunki[k,1]
