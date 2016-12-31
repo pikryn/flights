@@ -1,1 +1,1 @@
-ssh -i admin2.pem ec2-user@54.93.54.238
+ssh -i admin2.pem ubuntu@35.156.245.142
